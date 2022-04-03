@@ -4,6 +4,7 @@ import os
 import pandas as pd
 from file_operations import file_methods
 from extract_features.get_features_df import get_features
+from app_logging.logger import create_log
 import pickle
 from data_preprocessing import preprocessing
 import numpy as np
@@ -12,6 +13,7 @@ import __main__
 __main__.file_methods = file_methods
 __main__.get_features = get_features
 __main__.preprocessing = preprocessing
+__main__.create_log = create_log
 
 upload_folder = "App_Uploads/"
 app = Flask(__name__)
