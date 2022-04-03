@@ -4,7 +4,6 @@ import os
 import pandas as pd
 from file_operations import file_methods
 from extract_features.get_features_df import get_features
-from app_logging.logger import create_log
 import pickle
 from data_preprocessing import preprocessing
 import numpy as np
@@ -12,10 +11,7 @@ import numpy as np
 import __main__
 __main__.file_methods = file_methods
 __main__.get_features = get_features
-__main__.create_log = create_log
 __main__.preprocessing = preprocessing
-
-app_logger = create_log("App_Logs/output", filemode="a+")
 
 upload_folder = "App_Uploads/"
 app = Flask(__name__)
@@ -33,14 +29,9 @@ def home():
 def predict():
     try:
         if request.method == 'POST':
-            app_logger.info("Getting input from a user")
             url = str(request.form['website'])
             uploaded_file = request.files['file']
-            # print(url)
-            # print(uploaded_file.filename)
-            app_logger.info("User specified input is uploaded.")
-
-            app_logger.info("Processing user defined input")
+            
             if url != '':
                 data = get_features(url)
             else:
@@ -58,42 +49,32 @@ def predict():
                 map_url = raw_data.to_dict()['URL']
                 print(map_url)
                 data = get_features(raw_data)
-            app_logger.info("User defined input is processed.")
-
-            app_logger.info("Loading categorical columns' list")
+            
             # Loading categorical columns' list
             with open("EncoderPickle/cat_col_list.txt", 'rb') as file:
                 cat_col_list = pickle.load(file)
 
-            app_logger.info("Loading continuous columns' list")
-            # # Creating continuous columns' list
-            # cont_col_list = [col for col in data.columns if col not in cat_col_list and col != 'phishing']
             # Loading continuous columns' list
             with open("EncoderPickle/cont_col_list.txt", 'rb') as file:
                 cont_col_list = pickle.load(file)
 
-            app_logger.info("Encoding categorical data")
-            # get encoded values for categorical data
+            # Getting encoded values for categorical data
             preprocessor = preprocessing.Preprocessor("App_Logs/output", create_log)
             data = preprocessor.encode_categorical_values_prediction(data, cat_col_list)
 
             print(data.columns)
             print(cont_col_list)
-            app_logger.info("Replacing -1 values")
             # Replacing -1 with -999 in continuous columns
             data = preprocessor.replace_missing_values(data, cont_col_list)
 
-            app_logger.info("Loading kmeans' scaler")
             # Loading the kmeans' scaler
             with open("EncoderPickle/kmeans_scaler.txt", 'rb') as file:
                 scaler = pickle.load(file)
 
-            app_logger.info("Scaling continuous columns")
             # Scaling continuous columns for kmeans algo
             scaled_cont_data = pd.DataFrame(scaler.transform(data[cont_col_list]))
             scaled_cont_data.columns = cont_col_list
 
-            app_logger.info("Creating clusters out of user defined input")
             file_object = "App_Logs/output"
             log_function = create_log
             file_loader = file_methods.FileOperation(file_object, log_function)
@@ -101,14 +82,12 @@ def predict():
             clusters = kmeans.predict(scaled_cont_data)
             data['Clusters'] = clusters
             clusters = data['Clusters'].unique()
-            app_logger.info("Clusters for user defined input are created.")
-
-            app_logger.info("Prediction process is started.")
-            # loading columns/features that has been used for training
+            
+            # Loading columns/features that has been used for training
             with open("EncoderPickle/col_to_keep.txt", 'rb') as file:
                 col_to_keep = pickle.load(file)
 
-            # loading a dictionary containing dropped columns and
+            # Loading a dictionary containing dropped columns and
             # standardization pipelines of each cluster derived during training
             with open('EncoderPickle/drop_standardization_pipeline.txt', 'rb') as file:
                 drop_pipeline_dict = pickle.load(file)
@@ -138,9 +117,7 @@ def predict():
                 model = file_loader.load_model(model_name)
                 for val in model.predict(cluster_data):
                     result.append(val)
-            app_logger.info("Prediction is over.")
-
-            app_logger.info("Outputting the results")
+            
             if url != '':
                 text_result = ['yes' if x == 1 else 'no' for x in result][0]
                 decision_text = f"Is {url} a phishing website? Answer: {text_result}"
@@ -156,9 +133,8 @@ def predict():
                 return send_file(path, as_attachment=True)
         else:
             return render_template('index.html')
-    except:
-        app_logger.error('Error occurred', exc_info=True)
-
+    except Exception as e:
+        return render_template('index.html', prediction_text=str(e))
 
 if __name__ == "__main__":
     app.run(debug=True)
