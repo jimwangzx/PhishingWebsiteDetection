@@ -9,6 +9,12 @@ import pickle
 from data_preprocessing import preprocessing
 import numpy as np
 
+import __main__
+__main__.file_methods = file_methods
+__main__.get_features = get_features
+__main__.create_log = create_log
+__main__.preprocessing = preprocessing
+
 app_logger = create_log("App_Logs/output", filemode="a+")
 
 upload_folder = "App_Uploads/"
