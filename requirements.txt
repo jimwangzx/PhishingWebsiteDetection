@@ -5,10 +5,8 @@ async-timeout==4.0.2
 asynctest==0.13.0
 atomicwrites==1.4.0
 attrs
-bayesian-optimization==1.2.0
 beautifulsoup4==4.10.0
 cassandra-driver==3.25.0
-catboost==1.0.4
 certifi==2021.10.8
 charset-normalizer==2.0.12
 click
