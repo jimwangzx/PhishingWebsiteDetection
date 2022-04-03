@@ -1,0 +1,237 @@
+24-Mar-22 12:47:58 - INFO - Start of validation on files for prediction
+24-Mar-22 12:47:58 - INFO - LengthOfDateStampInFile:: 8 
+                          LengthOfTimeStampInFile:: 6 
+                          NumberofColumns:: 112
+24-Mar-22 12:47:59 - INFO - Valid File name. phishing_20032022_160100.csv moved to Good_Raw folder.
+24-Mar-22 12:47:59 - INFO - Column length validation has been started.
+24-Mar-22 12:47:59 - INFO - Column length validation has been completed.
+24-Mar-22 12:47:59 - INFO - Missing values validation has been started.
+24-Mar-22 12:47:59 - INFO - Raw data validation is completed.
+24-Mar-22 12:47:59 - INFO - Creating prediction database and tables on the basis of given schema
+24-Mar-22 12:48:11 - INFO - Opened websites keyspace successfully.
+24-Mar-22 12:48:12 - INFO - Tables created successfully.
+24-Mar-22 12:48:12 - INFO - Closed websites keyspace successfully.
+24-Mar-22 12:48:12 - INFO - Table creation is completed.
+24-Mar-22 12:48:12 - INFO - Insertion of data into the database is started.
+24-Mar-22 12:48:22 - INFO - Opened websites keyspace successfully.
+24-Mar-22 14:37:34 - INFO - Start of validation on files for prediction
+24-Mar-22 14:37:34 - INFO - LengthOfDateStampInFile:: 8 
+                          LengthOfTimeStampInFile:: 6 
+                          NumberofColumns:: 112
+24-Mar-22 14:37:34 - INFO - Bad_Raw directory deleted before starting validation.
+24-Mar-22 14:37:34 - INFO - GoodRaw directory deleted successfully.
+24-Mar-22 14:37:34 - INFO - Valid File name. phishing_20032022_160100.csv moved to Good_Raw folder.
+24-Mar-22 14:37:34 - INFO - Column length validation has been started.
+24-Mar-22 14:37:34 - INFO - Column length validation has been completed.
+24-Mar-22 14:37:34 - INFO - Missing values validation has been started.
+24-Mar-22 14:37:35 - INFO - Raw data validation is completed.
+24-Mar-22 14:37:35 - INFO - Creating prediction database and tables on the basis of given schema
+24-Mar-22 14:37:57 - INFO - Opened websites keyspace successfully.
+24-Mar-22 14:37:58 - INFO - Tables are in the database: no need to recreate them.
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\prediction_data_insertion\db_operations_prediction.py", line 81, in create_table_db
+    session.execute(create_query)
+  File "cassandra\cluster.py", line 2618, in cassandra.cluster.Session.execute
+  File "cassandra\cluster.py", line 4894, in cassandra.cluster.ResponseFuture.result
+cassandra.AlreadyExists: Table 'websites.prediction_phishing1' already exists
+24-Mar-22 14:37:58 - INFO - Closed websites keyspace successfully.
+24-Mar-22 14:37:58 - INFO - Table creation is completed.
+24-Mar-22 14:37:58 - INFO - Insertion of data into the database is started.
+24-Mar-22 14:38:07 - INFO - Opened websites keyspace successfully.
+24-Mar-22 14:42:41 - INFO - Start of validation on files for prediction
+24-Mar-22 14:42:41 - INFO - LengthOfDateStampInFile:: 8 
+                          LengthOfTimeStampInFile:: 6 
+                          NumberofColumns:: 112
+24-Mar-22 14:42:41 - INFO - Bad_Raw directory deleted before starting validation.
+24-Mar-22 14:42:41 - INFO - GoodRaw directory deleted successfully.
+24-Mar-22 14:42:41 - INFO - Valid File name. phishing_20032022_160100.csv moved to Good_Raw folder.
+24-Mar-22 14:42:41 - INFO - Column length validation has been started.
+24-Mar-22 14:42:42 - INFO - Column length validation has been completed.
+24-Mar-22 14:42:42 - INFO - Missing values validation has been started.
+24-Mar-22 14:42:42 - INFO - Raw data validation is completed.
+24-Mar-22 14:42:42 - INFO - Creating prediction database and tables on the basis of given schema
+24-Mar-22 14:42:53 - INFO - Opened websites keyspace successfully.
+24-Mar-22 14:42:53 - INFO - Tables are in the database: no need to recreate them.
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\prediction_data_insertion\db_operations_prediction.py", line 81, in create_table_db
+    session.execute(create_query)
+  File "cassandra\cluster.py", line 2618, in cassandra.cluster.Session.execute
+  File "cassandra\cluster.py", line 4894, in cassandra.cluster.ResponseFuture.result
+cassandra.AlreadyExists: Table 'websites.prediction_phishing1' already exists
+24-Mar-22 14:42:54 - INFO - Closed websites keyspace successfully.
+24-Mar-22 14:42:54 - INFO - Table creation is completed.
+24-Mar-22 14:42:54 - INFO - Insertion of data into the database is started.
+24-Mar-22 14:43:06 - INFO - Opened websites keyspace successfully.
+24-Mar-22 14:43:10 - INFO -  phishing_20032022_160100.csv file is loaded successfully.
+24-Mar-22 14:43:10 - INFO - Insertion into the database is completed.
+24-Mar-22 14:43:10 - INFO - Deleting good data folder
+24-Mar-22 14:43:10 - INFO - GoodRaw directory deleted successfully.
+24-Mar-22 14:43:10 - INFO - Good_Data folder is deleted.
+24-Mar-22 14:43:10 - INFO - Moving bad files to archive and deleting Bad_Data folder
+24-Mar-22 14:43:10 - INFO - Bad files moved to archive
+24-Mar-22 14:43:10 - INFO - Bad Raw Data Folder Deleted successfully.
+24-Mar-22 14:43:10 - INFO - Bad files are moved to archive. Bad folder is deleted.
+24-Mar-22 14:43:10 - INFO - Validation operation is completed.
+24-Mar-22 14:43:10 - INFO - Extracting csv file from the database
+24-Mar-22 14:43:20 - INFO - Opened websites keyspace successfully.
+24-Mar-22 14:43:21 - INFO - The csv file is exported successfully.
+24-Mar-22 14:43:22 - INFO - Start of prediction
+24-Mar-22 14:43:22 - INFO - Entered the get_data method of the DataGetterPred class
+24-Mar-22 14:43:22 - INFO - Data Load Successful.Exited the get_data method of the DataGetterPred class
+24-Mar-22 14:43:22 - INFO - Entered the is_null_present method of the Preprocessor class
+24-Mar-22 14:43:22 - INFO - Finding missing values is a success.Data written to the null values file.             Exited the is_null_present method of the Preprocessor class
+24-Mar-22 14:43:22 - INFO - Entered the replace_missing_values method of the Preprocessor class
+24-Mar-22 14:43:22 - INFO - The -1 values have been replaced with -999.
+24-Mar-22 14:43:22 - INFO - Entered the load_model method of the FileOperation class
+24-Mar-22 14:43:22 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+24-Mar-22 14:43:22 - INFO - Entered the separate_label_feature method of the Preprocessor class
+24-Mar-22 14:43:22 - INFO - Label separation successful. Exited the separate_label_feature method of             the Preprocessor class
+24-Mar-22 14:43:22 - ERROR - Error occurred while running the prediction!! Error: X has 106 features, but StandardScaler is expecting 93 features as input.
+24-Mar-22 18:29:41 - INFO - Start of validation on files for prediction
+24-Mar-22 18:29:41 - INFO - LengthOfDateStampInFile:: 8 
+                          LengthOfTimeStampInFile:: 6 
+                          NumberofColumns:: 112
+24-Mar-22 18:29:41 - INFO - Valid File name. phishing_20032022_160100.csv moved to Good_Raw folder.
+24-Mar-22 18:29:41 - INFO - Column length validation has been started.
+24-Mar-22 18:29:42 - INFO - Column length validation has been completed.
+24-Mar-22 18:29:42 - INFO - Missing values validation has been started.
+24-Mar-22 18:29:42 - INFO - Raw data validation is completed.
+24-Mar-22 18:29:42 - INFO - Creating prediction database and tables on the basis of given schema
+24-Mar-22 18:29:52 - INFO - Opened websites keyspace successfully.
+24-Mar-22 18:29:52 - INFO - Tables are in the database: no need to recreate them.
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\prediction_data_insertion\db_operations_prediction.py", line 81, in create_table_db
+    session.execute(create_query)
+  File "cassandra\cluster.py", line 2618, in cassandra.cluster.Session.execute
+  File "cassandra\cluster.py", line 4894, in cassandra.cluster.ResponseFuture.result
+cassandra.AlreadyExists: Table 'websites.prediction_phishing1' already exists
+24-Mar-22 18:29:53 - INFO - Closed websites keyspace successfully.
+24-Mar-22 18:29:53 - INFO - Table creation is completed.
+24-Mar-22 18:29:53 - INFO - Insertion of data into the database is started.
+24-Mar-22 18:30:02 - INFO - Opened websites keyspace successfully.
+24-Mar-22 18:30:02 - INFO - The file has been inserted: no need to reinsert.
+24-Mar-22 18:30:03 - INFO - Insertion into the database is completed.
+24-Mar-22 18:30:03 - INFO - Deleting good data folder
+24-Mar-22 18:30:03 - INFO - GoodRaw directory deleted successfully.
+24-Mar-22 18:30:03 - INFO - Good_Data folder is deleted.
+24-Mar-22 18:30:03 - INFO - Moving bad files to archive and deleting Bad_Data folder
+24-Mar-22 18:30:03 - INFO - Bad files moved to archive
+24-Mar-22 18:30:03 - INFO - Bad Raw Data Folder Deleted successfully.
+24-Mar-22 18:30:03 - INFO - Bad files are moved to archive. Bad folder is deleted.
+24-Mar-22 18:30:03 - INFO - Validation operation is completed.
+24-Mar-22 18:30:03 - INFO - Extracting csv file from the database
+24-Mar-22 18:30:12 - INFO - Opened websites keyspace successfully.
+24-Mar-22 18:30:13 - INFO - The csv file is exported successfully.
+24-Mar-22 18:30:13 - INFO - Start of prediction
+24-Mar-22 18:30:13 - INFO - Entered the get_data method of the DataGetterPred class
+24-Mar-22 18:30:13 - INFO - Data Load Successful.Exited the get_data method of the DataGetterPred class
+24-Mar-22 18:30:13 - INFO - Entered the is_null_present method of the Preprocessor class
+24-Mar-22 18:30:13 - INFO - Finding missing values is a success.Data written to the null values file.             Exited the is_null_present method of the Preprocessor class
+24-Mar-22 18:30:13 - INFO - Entered the replace_missing_values method of the Preprocessor class
+24-Mar-22 18:30:13 - INFO - The -1 values have been replaced with -999.
+24-Mar-22 18:30:13 - INFO - Entered the load_model method of the FileOperation class
+24-Mar-22 18:30:13 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+24-Mar-22 18:30:14 - INFO - Entered the separate_label_feature method of the Preprocessor class
+24-Mar-22 18:30:14 - INFO - Label separation successful. Exited the separate_label_feature method of             the Preprocessor class
+24-Mar-22 18:30:16 - ERROR - Error occurred while running the prediction!! Error: "['url_google_index_no', 'qty_tilde_params_yes', 'tld_present_params_yes', 'url_google_index_yes', 'domain_google_index_no', 'domain_google_index_yes', 'domain_spf_no'] not in index"
+24-Mar-22 18:37:12 - INFO - Start of validation on files for prediction
+24-Mar-22 18:37:12 - INFO - LengthOfDateStampInFile:: 8 
+                          LengthOfTimeStampInFile:: 6 
+                          NumberofColumns:: 112
+24-Mar-22 18:37:12 - INFO - Valid File name. phishing_20032022_160100.csv moved to Good_Raw folder.
+24-Mar-22 18:37:12 - INFO - Column length validation has been started.
+24-Mar-22 18:37:12 - INFO - Column length validation has been completed.
+24-Mar-22 18:37:12 - INFO - Missing values validation has been started.
+24-Mar-22 18:37:12 - INFO - Raw data validation is completed.
+24-Mar-22 18:37:12 - INFO - Creating prediction database and tables on the basis of given schema
+24-Mar-22 18:37:22 - INFO - Opened websites keyspace successfully.
+24-Mar-22 18:37:22 - INFO - Tables are in the database: no need to recreate them.
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\prediction_data_insertion\db_operations_prediction.py", line 81, in create_table_db
+    session.execute(create_query)
+  File "cassandra\cluster.py", line 2618, in cassandra.cluster.Session.execute
+  File "cassandra\cluster.py", line 4894, in cassandra.cluster.ResponseFuture.result
+cassandra.AlreadyExists: Table 'websites.prediction_phishing1' already exists
+24-Mar-22 18:37:24 - INFO - Closed websites keyspace successfully.
+24-Mar-22 18:37:24 - INFO - Table creation is completed.
+24-Mar-22 18:37:24 - INFO - Insertion of data into the database is started.
+24-Mar-22 18:37:35 - INFO - Opened websites keyspace successfully.
+24-Mar-22 18:37:37 - INFO - The file has been inserted: no need to reinsert.
+24-Mar-22 18:37:38 - INFO - Insertion into the database is completed.
+24-Mar-22 18:37:38 - INFO - Deleting good data folder
+24-Mar-22 18:37:53 - INFO - GoodRaw directory deleted successfully.
+24-Mar-22 18:37:53 - INFO - Good_Data folder is deleted.
+24-Mar-22 18:37:53 - INFO - Moving bad files to archive and deleting Bad_Data folder
+24-Mar-22 18:37:53 - INFO - Bad files moved to archive
+24-Mar-22 18:37:53 - INFO - Bad Raw Data Folder Deleted successfully.
+24-Mar-22 18:37:53 - INFO - Bad files are moved to archive. Bad folder is deleted.
+24-Mar-22 18:37:53 - INFO - Validation operation is completed.
+24-Mar-22 18:37:53 - INFO - Extracting csv file from the database
+24-Mar-22 18:38:10 - ERROR - The csv file exporting failed. Error : ('Unable to connect to any servers', {'5ab86f0e-9ab1-4cb8-9ae5-006ee8cc4a37-europe-west1.db.astra.datastax.com:29042:ff972584-7897-4f37-acce-ed494fbfda96': OperationTimedOut('errors=Timed out creating connection (5 seconds), last_host=None'), '5ab86f0e-9ab1-4cb8-9ae5-006ee8cc4a37-europe-west1.db.astra.datastax.com:29042:15042981-6c6c-4a59-9e45-82afa48527c0': OSError(None, "Tried connecting to [('34.77.109.101', 29042)]. Last error: timed out"), '5ab86f0e-9ab1-4cb8-9ae5-006ee8cc4a37-europe-west1.db.astra.datastax.com:29042:157cd115-df5d-4937-8955-9442d413cdb5': ConnectionResetError(10054, "Tried connecting to [('34.77.109.101', 29042)]. Last error: An existing connection was forcibly closed by the remote host")})
+24-Mar-22 18:38:11 - INFO - Start of prediction
+24-Mar-22 18:38:11 - INFO - Entered the get_data method of the DataGetterPred class
+24-Mar-22 18:38:11 - INFO - Data Load Successful.Exited the get_data method of the DataGetterPred class
+24-Mar-22 18:38:11 - INFO - Entered the is_null_present method of the Preprocessor class
+24-Mar-22 18:38:11 - INFO - Finding missing values is a success.Data written to the null values file.             Exited the is_null_present method of the Preprocessor class
+24-Mar-22 18:38:11 - INFO - Entered the replace_missing_values method of the Preprocessor class
+24-Mar-22 18:38:11 - INFO - The -1 values have been replaced with -999.
+24-Mar-22 18:38:11 - INFO - Entered the load_model method of the FileOperation class
+24-Mar-22 18:38:11 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+24-Mar-22 18:38:11 - INFO - Entered the separate_label_feature method of the Preprocessor class
+24-Mar-22 18:38:11 - INFO - Label separation successful. Exited the separate_label_feature method of             the Preprocessor class
+24-Mar-22 18:38:13 - ERROR - Error occurred while running the prediction!! Error: "['url_google_index_yes', 'domain_google_index_yes', 'qty_tilde_params_yes', 'tld_present_params_yes'] not in index"
+24-Mar-22 19:55:19 - INFO - Start of validation on files for prediction
+24-Mar-22 19:55:20 - INFO - LengthOfDateStampInFile:: 8 
+                          LengthOfTimeStampInFile:: 6 
+                          NumberofColumns:: 112
+24-Mar-22 19:55:20 - INFO - Valid File name. phishing_20032022_160100.csv moved to Good_Raw folder.
+24-Mar-22 19:55:20 - INFO - Column length validation has been started.
+24-Mar-22 19:55:20 - INFO - Column length validation has been completed.
+24-Mar-22 19:55:20 - INFO - Missing values validation has been started.
+24-Mar-22 19:55:21 - INFO - Raw data validation is completed.
+24-Mar-22 19:55:21 - INFO - Creating prediction database and tables on the basis of given schema
+24-Mar-22 19:55:33 - INFO - Opened websites keyspace successfully.
+24-Mar-22 19:55:33 - INFO - Tables are in the database: no need to recreate them.
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\prediction_data_insertion\db_operations_prediction.py", line 81, in create_table_db
+    session.execute(create_query)
+  File "cassandra\cluster.py", line 2618, in cassandra.cluster.Session.execute
+  File "cassandra\cluster.py", line 4894, in cassandra.cluster.ResponseFuture.result
+cassandra.AlreadyExists: Table 'websites.prediction_phishing1' already exists
+24-Mar-22 19:55:35 - INFO - Closed websites keyspace successfully.
+24-Mar-22 19:55:35 - INFO - Table creation is completed.
+24-Mar-22 19:55:35 - INFO - Insertion of data into the database is started.
+24-Mar-22 19:55:43 - INFO - Opened websites keyspace successfully.
+24-Mar-22 19:55:45 - INFO - The file has been inserted: no need to reinsert.
+24-Mar-22 19:55:47 - INFO - Insertion into the database is completed.
+24-Mar-22 19:55:47 - INFO - Deleting good data folder
+24-Mar-22 19:55:47 - INFO - GoodRaw directory deleted successfully.
+24-Mar-22 19:55:47 - INFO - Good_Data folder is deleted.
+24-Mar-22 19:55:47 - INFO - Moving bad files to archive and deleting Bad_Data folder
+24-Mar-22 19:55:47 - INFO - Bad files moved to archive
+24-Mar-22 19:55:47 - INFO - Bad Raw Data Folder Deleted successfully.
+24-Mar-22 19:55:47 - INFO - Bad files are moved to archive. Bad folder is deleted.
+24-Mar-22 19:55:47 - INFO - Validation operation is completed.
+24-Mar-22 19:55:47 - INFO - Extracting csv file from the database
+24-Mar-22 19:56:04 - INFO - Opened websites keyspace successfully.
+24-Mar-22 19:56:06 - INFO - The csv file is exported successfully.
+24-Mar-22 19:56:06 - INFO - Start of prediction
+24-Mar-22 19:56:06 - INFO - Entered the get_data method of the DataGetterPred class
+24-Mar-22 19:56:06 - INFO - Data Load Successful.Exited the get_data method of the DataGetterPred class
+24-Mar-22 19:56:06 - INFO - Entered the is_null_present method of the Preprocessor class
+24-Mar-22 19:56:06 - INFO - Finding missing values is a success.Data written to the null values file.             Exited the is_null_present method of the Preprocessor class
+24-Mar-22 19:56:06 - INFO - Entered the replace_missing_values method of the Preprocessor class
+24-Mar-22 19:56:07 - INFO - The -1 values have been replaced with -999.
+24-Mar-22 19:56:07 - INFO - Entered the load_model method of the FileOperation class
+24-Mar-22 19:56:07 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+24-Mar-22 19:56:07 - INFO - Entered the separate_label_feature method of the Preprocessor class
+24-Mar-22 19:56:07 - INFO - Label separation successful. Exited the separate_label_feature method of             the Preprocessor class
+24-Mar-22 19:56:15 - INFO - Entered the find_correct_model_file method of the FileOperation class
+24-Mar-22 19:56:15 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+24-Mar-22 19:56:15 - INFO - Entered the load_model method of the FileOperation class
+24-Mar-22 19:56:15 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+24-Mar-22 19:56:16 - INFO - Entered the find_correct_model_file method of the FileOperation class
+24-Mar-22 19:56:16 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+24-Mar-22 19:56:16 - INFO - Entered the load_model method of the FileOperation class
+24-Mar-22 19:56:16 - INFO - Model file XGBoost2 loaded. Exited the load_model method of the FileOperation class
+24-Mar-22 19:56:16 - INFO - End of prediction

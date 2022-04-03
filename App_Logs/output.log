@@ -1,0 +1,1033 @@
+24-Mar-22 22:38:14 - INFO - Getting input from a user
+24-Mar-22 22:38:14 - INFO - User specified input is uploaded.
+24-Mar-22 22:38:14 - INFO - Processing user defined input
+24-Mar-22 22:38:15 - INFO - DataFrame has been created.
+24-Mar-22 22:38:15 - INFO - Starting URL based feature extraction
+24-Mar-22 22:38:16 - INFO - End of URL based feature extraction
+24-Mar-22 22:38:16 - INFO - Starting URL domain based feature extraction
+24-Mar-22 22:38:16 - INFO - End of URL domain based feature extraction
+24-Mar-22 22:38:16 - INFO - Starting URL directory based feature extraction
+24-Mar-22 22:38:16 - INFO - End of URL directory based feature extraction
+24-Mar-22 22:38:16 - INFO - Starting URL file name based feature extraction
+24-Mar-22 22:38:16 - INFO - End of URL file name based feature extraction
+24-Mar-22 22:38:16 - INFO - Starting URL parameters based feature extraction
+24-Mar-22 22:38:16 - INFO - End of URL parameters based feature extraction
+24-Mar-22 22:38:16 - INFO - Starting resolving URL and external services based feature extraction
+24-Mar-22 22:38:16 - INFO - End of resolving URL and external services based feature extraction
+24-Mar-22 22:38:16 - INFO - User defined input is processed.
+24-Mar-22 22:38:16 - INFO - Loading categorical columns' list
+24-Mar-22 22:38:16 - INFO - Loading continuous columns' list
+24-Mar-22 22:38:16 - INFO - Encoding categorical data
+24-Mar-22 22:38:17 - INFO - Replacing -1 values
+24-Mar-22 22:38:17 - INFO - Replacing -1 values
+24-Mar-22 22:38:17 - INFO - Entered the replace_missing_values method of the Preprocessor class
+24-Mar-22 22:38:17 - INFO - Entered the replace_missing_values method of the Preprocessor class
+24-Mar-22 22:38:17 - INFO - Error occurred in replacement process
+Traceback (most recent call last):
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'domain_in_ip'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\data_preprocessing\preprocessing.py", line 239, in replace_missing_values
+    data[col] = data[col].apply(lambda x: -999 if x == -1 else x)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'domain_in_ip'
+24-Mar-22 22:38:17 - INFO - Error occurred in replacement process
+Traceback (most recent call last):
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'domain_in_ip'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\data_preprocessing\preprocessing.py", line 239, in replace_missing_values
+    data[col] = data[col].apply(lambda x: -999 if x == -1 else x)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'domain_in_ip'
+24-Mar-22 22:38:17 - INFO - Loading kmeans' scaler
+24-Mar-22 22:38:17 - INFO - Loading kmeans' scaler
+24-Mar-22 22:38:17 - INFO - Scaling continuous columns
+24-Mar-22 22:38:17 - INFO - Scaling continuous columns
+24-Mar-22 22:38:17 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\app.py", line 85, in predict
+    scaled_cont_data = scaler.transform(data[cont_col_list])
+TypeError: 'NoneType' object is not subscriptable
+24-Mar-22 22:38:17 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\app.py", line 85, in predict
+    scaled_cont_data = scaler.transform(data[cont_col_list])
+TypeError: 'NoneType' object is not subscriptable
+24-Mar-22 22:49:42 - INFO - Getting input from a user
+24-Mar-22 22:49:42 - INFO - User specified input is uploaded.
+24-Mar-22 22:49:42 - INFO - Processing user defined input
+24-Mar-22 22:49:42 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\app.py", line 42, in predict
+    os.remove(os.listdir(upload_folder)[0])
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'urls_raw.xlsx'
+24-Mar-22 23:00:49 - INFO - Getting input from a user
+24-Mar-22 23:00:49 - INFO - User specified input is uploaded.
+24-Mar-22 23:00:49 - INFO - Processing user defined input
+24-Mar-22 23:00:50 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\app.py", line 50, in predict
+    raw_data = pd.read_excel(raw_file_path, header=None)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\util\_decorators.py", line 296, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\io\excel\_base.py", line 304, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\io\excel\_base.py", line 867, in __init__
+    self._reader = self._engines[engine](self._io)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\io\excel\_xlrd.py", line 21, in __init__
+    import_optional_dependency("xlrd", extra=err_msg)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\compat\_optional.py", line 110, in import_optional_dependency
+    raise ImportError(msg) from None
+ImportError: Missing optional dependency 'xlrd'. Install xlrd >= 1.0.0 for Excel support Use pip or conda to install xlrd.
+24-Mar-22 23:10:26 - INFO - Getting input from a user
+24-Mar-22 23:10:26 - INFO - User specified input is uploaded.
+24-Mar-22 23:10:26 - INFO - Processing user defined input
+24-Mar-22 23:10:27 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\app.py", line 50, in predict
+    raw_data = pd.read_excel(raw_file_path, header=None)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\util\_decorators.py", line 296, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\io\excel\_base.py", line 304, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\io\excel\_base.py", line 867, in __init__
+    self._reader = self._engines[engine](self._io)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\io\excel\_xlrd.py", line 22, in __init__
+    super().__init__(filepath_or_buffer)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\io\excel\_base.py", line 353, in __init__
+    self.book = self.load_workbook(filepath_or_buffer)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\io\excel\_xlrd.py", line 37, in load_workbook
+    return open_workbook(filepath_or_buffer)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\xlrd\__init__.py", line 170, in open_workbook
+    raise XLRDError(FILE_FORMAT_DESCRIPTIONS[file_format]+'; not supported')
+xlrd.biffh.XLRDError: Excel xlsx file; not supported
+24-Mar-22 23:26:15 - INFO - Getting input from a user
+24-Mar-22 23:26:15 - INFO - User specified input is uploaded.
+24-Mar-22 23:26:15 - INFO - Processing user defined input
+24-Mar-22 23:26:17 - INFO - DataFrame has been created.
+24-Mar-22 23:26:17 - INFO - Starting URL based feature extraction
+24-Mar-22 23:26:17 - INFO - End of URL based feature extraction
+24-Mar-22 23:26:17 - INFO - Starting URL domain based feature extraction
+24-Mar-22 23:26:17 - INFO - End of URL domain based feature extraction
+24-Mar-22 23:26:17 - INFO - Starting URL directory based feature extraction
+24-Mar-22 23:26:17 - INFO - End of URL directory based feature extraction
+24-Mar-22 23:26:17 - INFO - Starting URL file name based feature extraction
+24-Mar-22 23:26:17 - INFO - End of URL file name based feature extraction
+24-Mar-22 23:26:17 - INFO - Starting URL parameters based feature extraction
+24-Mar-22 23:26:17 - INFO - End of URL parameters based feature extraction
+24-Mar-22 23:26:17 - INFO - Starting resolving URL and external services based feature extraction
+24-Mar-22 23:26:19 - INFO - End of resolving URL and external services based feature extraction
+24-Mar-22 23:26:19 - INFO - User defined input is processed.
+24-Mar-22 23:26:19 - INFO - Loading categorical columns' list
+24-Mar-22 23:26:19 - INFO - Loading continuous columns' list
+24-Mar-22 23:26:19 - INFO - Encoding categorical data
+24-Mar-22 23:26:21 - INFO - Replacing -1 values
+24-Mar-22 23:26:21 - INFO - Replacing -1 values
+24-Mar-22 23:26:21 - INFO - Entered the replace_missing_values method of the Preprocessor class
+24-Mar-22 23:26:21 - INFO - Entered the replace_missing_values method of the Preprocessor class
+24-Mar-22 23:26:21 - INFO - Error occurred in replacement process
+Traceback (most recent call last):
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'domain_in_ip'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\data_preprocessing\preprocessing.py", line 239, in replace_missing_values
+    data[col] = data[col].apply(lambda x: -999 if x == -1 else x)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'domain_in_ip'
+24-Mar-22 23:26:21 - INFO - Error occurred in replacement process
+Traceback (most recent call last):
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'domain_in_ip'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\data_preprocessing\preprocessing.py", line 239, in replace_missing_values
+    data[col] = data[col].apply(lambda x: -999 if x == -1 else x)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'domain_in_ip'
+24-Mar-22 23:26:21 - INFO - Loading kmeans' scaler
+24-Mar-22 23:26:21 - INFO - Loading kmeans' scaler
+24-Mar-22 23:26:22 - INFO - Scaling continuous columns
+24-Mar-22 23:26:22 - INFO - Scaling continuous columns
+24-Mar-22 23:26:22 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\app.py", line 87, in predict
+    scaled_cont_data = scaler.transform(data[cont_col_list])
+TypeError: 'NoneType' object is not subscriptable
+24-Mar-22 23:26:22 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\app.py", line 87, in predict
+    scaled_cont_data = scaler.transform(data[cont_col_list])
+TypeError: 'NoneType' object is not subscriptable
+25-Mar-22 08:17:29 - INFO - Getting input from a user
+25-Mar-22 08:17:29 - INFO - User specified input is uploaded.
+25-Mar-22 08:17:29 - INFO - Processing user defined input
+25-Mar-22 08:17:30 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:/Users/Vahe/PycharmProjects/pythonProject/experiment.py", line 67, in <module>
+    raw_data = pd.read_excel(raw_file_path, header=None)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\util\_decorators.py", line 296, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\io\excel\_base.py", line 304, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\io\excel\_base.py", line 867, in __init__
+    self._reader = self._engines[engine](self._io)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\io\excel\_xlrd.py", line 22, in __init__
+    super().__init__(filepath_or_buffer)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\io\excel\_base.py", line 353, in __init__
+    self.book = self.load_workbook(filepath_or_buffer)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\io\excel\_xlrd.py", line 37, in load_workbook
+    return open_workbook(filepath_or_buffer)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\xlrd\__init__.py", line 170, in open_workbook
+    raise XLRDError(FILE_FORMAT_DESCRIPTIONS[file_format]+'; not supported')
+xlrd.biffh.XLRDError: Excel xlsx file; not supported
+25-Mar-22 08:19:39 - INFO - Getting input from a user
+25-Mar-22 08:19:39 - INFO - User specified input is uploaded.
+25-Mar-22 08:19:39 - INFO - Processing user defined input
+25-Mar-22 08:19:49 - INFO - DataFrame has been created.
+25-Mar-22 08:19:49 - INFO - Starting URL based feature extraction
+25-Mar-22 08:19:49 - INFO - End of URL based feature extraction
+25-Mar-22 08:19:49 - INFO - Starting URL domain based feature extraction
+25-Mar-22 08:19:49 - INFO - End of URL domain based feature extraction
+25-Mar-22 08:19:49 - INFO - Starting URL directory based feature extraction
+25-Mar-22 08:19:49 - INFO - End of URL directory based feature extraction
+25-Mar-22 08:19:49 - INFO - Starting URL file name based feature extraction
+25-Mar-22 08:19:49 - INFO - End of URL file name based feature extraction
+25-Mar-22 08:19:49 - INFO - Starting URL parameters based feature extraction
+25-Mar-22 08:19:49 - INFO - End of URL parameters based feature extraction
+25-Mar-22 08:19:49 - INFO - Starting resolving URL and external services based feature extraction
+25-Mar-22 08:24:40 - INFO - End of resolving URL and external services based feature extraction
+25-Mar-22 08:24:40 - INFO - User defined input is processed.
+25-Mar-22 08:24:40 - INFO - Loading categorical columns' list
+25-Mar-22 08:24:40 - INFO - Loading continuous columns' list
+25-Mar-22 08:24:40 - INFO - Encoding categorical data
+25-Mar-22 08:24:41 - INFO - Replacing -1 values
+25-Mar-22 08:24:41 - INFO - Replacing -1 values
+25-Mar-22 08:24:41 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 08:24:41 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 08:24:41 - INFO - The -1 values have been replaced with -999.
+25-Mar-22 08:24:41 - INFO - The -1 values have been replaced with -999.
+25-Mar-22 08:24:41 - INFO - Loading kmeans' scaler
+25-Mar-22 08:24:41 - INFO - Loading kmeans' scaler
+25-Mar-22 08:24:41 - INFO - Scaling continuous columns
+25-Mar-22 08:24:41 - INFO - Scaling continuous columns
+25-Mar-22 08:24:42 - INFO - Creating clusters out of user defined input
+25-Mar-22 08:24:42 - INFO - Creating clusters out of user defined input
+25-Mar-22 08:24:42 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:24:42 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:24:42 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:24:42 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:24:42 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:24:42 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:24:52 - INFO - Clusters for user defined input are created.
+25-Mar-22 08:24:52 - INFO - Clusters for user defined input are created.
+25-Mar-22 08:24:52 - INFO - Clusters for user defined input are created.
+25-Mar-22 08:24:52 - INFO - Prediction process is started.
+25-Mar-22 08:24:52 - INFO - Prediction process is started.
+25-Mar-22 08:24:52 - INFO - Prediction process is started.
+25-Mar-22 08:24:53 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 08:24:53 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 08:24:53 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 08:24:53 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 08:24:53 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 08:24:53 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 08:24:53 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:24:53 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:24:53 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:24:53 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:24:53 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:24:53 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:24:55 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 08:24:55 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 08:24:55 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 08:24:55 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 08:24:55 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 08:24:55 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 08:24:55 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:24:55 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:24:55 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:24:55 - INFO - Model file XGBoost2 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:24:55 - INFO - Model file XGBoost2 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:24:55 - INFO - Model file XGBoost2 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:24:56 - INFO - Prediction is over.
+25-Mar-22 08:24:56 - INFO - Prediction is over.
+25-Mar-22 08:24:56 - INFO - Prediction is over.
+25-Mar-22 08:24:56 - INFO - Outputting the results
+25-Mar-22 08:24:56 - INFO - Outputting the results
+25-Mar-22 08:24:56 - INFO - Outputting the results
+25-Mar-22 08:29:45 - INFO - Getting input from a user
+25-Mar-22 08:29:45 - INFO - User specified input is uploaded.
+25-Mar-22 08:29:45 - INFO - Processing user defined input
+25-Mar-22 08:29:49 - INFO - DataFrame has been created.
+25-Mar-22 08:29:49 - INFO - Starting URL based feature extraction
+25-Mar-22 08:29:49 - INFO - End of URL based feature extraction
+25-Mar-22 08:29:49 - INFO - Starting URL domain based feature extraction
+25-Mar-22 08:29:49 - INFO - End of URL domain based feature extraction
+25-Mar-22 08:29:49 - INFO - Starting URL directory based feature extraction
+25-Mar-22 08:29:49 - INFO - End of URL directory based feature extraction
+25-Mar-22 08:29:49 - INFO - Starting URL file name based feature extraction
+25-Mar-22 08:29:49 - INFO - End of URL file name based feature extraction
+25-Mar-22 08:29:49 - INFO - Starting URL parameters based feature extraction
+25-Mar-22 08:29:49 - INFO - End of URL parameters based feature extraction
+25-Mar-22 08:29:49 - INFO - Starting resolving URL and external services based feature extraction
+25-Mar-22 08:34:01 - INFO - End of resolving URL and external services based feature extraction
+25-Mar-22 08:34:01 - INFO - User defined input is processed.
+25-Mar-22 08:34:01 - INFO - Loading categorical columns' list
+25-Mar-22 08:34:01 - INFO - Loading continuous columns' list
+25-Mar-22 08:34:01 - INFO - Encoding categorical data
+25-Mar-22 08:34:01 - INFO - Replacing -1 values
+25-Mar-22 08:34:01 - INFO - Replacing -1 values
+25-Mar-22 08:34:01 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 08:34:01 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 08:34:01 - INFO - The -1 values have been replaced with -999.
+25-Mar-22 08:34:01 - INFO - The -1 values have been replaced with -999.
+25-Mar-22 08:34:01 - INFO - Loading kmeans' scaler
+25-Mar-22 08:34:01 - INFO - Loading kmeans' scaler
+25-Mar-22 08:34:01 - INFO - Scaling continuous columns
+25-Mar-22 08:34:01 - INFO - Scaling continuous columns
+25-Mar-22 08:34:01 - INFO - Creating clusters out of user defined input
+25-Mar-22 08:34:01 - INFO - Creating clusters out of user defined input
+25-Mar-22 08:34:01 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:34:01 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:34:01 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:34:01 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:34:01 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:34:01 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:34:03 - INFO - Clusters for user defined input are created.
+25-Mar-22 08:34:03 - INFO - Clusters for user defined input are created.
+25-Mar-22 08:34:03 - INFO - Clusters for user defined input are created.
+25-Mar-22 08:34:03 - INFO - Prediction process is started.
+25-Mar-22 08:34:03 - INFO - Prediction process is started.
+25-Mar-22 08:34:03 - INFO - Prediction process is started.
+25-Mar-22 08:34:03 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 08:34:03 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 08:34:03 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 08:34:03 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 08:34:03 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 08:34:03 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 08:34:03 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:34:03 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:34:03 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:34:03 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:34:03 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:34:03 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:34:04 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 08:34:04 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 08:34:04 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 08:34:04 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 08:34:04 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 08:34:04 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 08:34:04 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:34:04 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:34:04 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 08:34:04 - INFO - Model file XGBoost2 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:34:04 - INFO - Model file XGBoost2 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:34:04 - INFO - Model file XGBoost2 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 08:34:04 - INFO - Prediction is over.
+25-Mar-22 08:34:04 - INFO - Prediction is over.
+25-Mar-22 08:34:04 - INFO - Prediction is over.
+25-Mar-22 08:34:04 - INFO - Outputting the results
+25-Mar-22 08:34:04 - INFO - Outputting the results
+25-Mar-22 08:34:04 - INFO - Outputting the results
+25-Mar-22 08:50:04 - INFO - Getting input from a user
+25-Mar-22 08:50:04 - INFO - User specified input is uploaded.
+25-Mar-22 08:50:04 - INFO - Processing user defined input
+25-Mar-22 08:50:04 - INFO - DataFrame has been created.
+25-Mar-22 08:50:04 - INFO - Starting URL based feature extraction
+25-Mar-22 08:50:04 - INFO - End of URL based feature extraction
+25-Mar-22 08:50:04 - INFO - Starting URL domain based feature extraction
+25-Mar-22 08:50:04 - INFO - End of URL domain based feature extraction
+25-Mar-22 08:50:04 - INFO - Starting URL directory based feature extraction
+25-Mar-22 08:50:04 - INFO - End of URL directory based feature extraction
+25-Mar-22 08:50:04 - INFO - Starting URL file name based feature extraction
+25-Mar-22 08:50:04 - INFO - End of URL file name based feature extraction
+25-Mar-22 08:50:04 - INFO - Starting URL parameters based feature extraction
+25-Mar-22 08:50:04 - INFO - End of URL parameters based feature extraction
+25-Mar-22 08:50:04 - INFO - Starting resolving URL and external services based feature extraction
+25-Mar-22 08:50:04 - INFO - End of resolving URL and external services based feature extraction
+25-Mar-22 08:50:04 - INFO - User defined input is processed.
+25-Mar-22 08:50:04 - INFO - Loading categorical columns' list
+25-Mar-22 08:50:04 - INFO - Loading continuous columns' list
+25-Mar-22 08:50:04 - INFO - Encoding categorical data
+25-Mar-22 08:50:05 - INFO - Replacing -1 values
+25-Mar-22 08:50:05 - INFO - Replacing -1 values
+25-Mar-22 08:50:05 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 08:50:05 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 08:50:05 - INFO - Error occurred in replacement process
+Traceback (most recent call last):
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'domain_in_ip'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\data_preprocessing\preprocessing.py", line 239, in replace_missing_values
+    data[col] = data[col].apply(lambda x: -999 if x == -1 else x)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'domain_in_ip'
+25-Mar-22 08:50:05 - INFO - Error occurred in replacement process
+Traceback (most recent call last):
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'domain_in_ip'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\data_preprocessing\preprocessing.py", line 239, in replace_missing_values
+    data[col] = data[col].apply(lambda x: -999 if x == -1 else x)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'domain_in_ip'
+25-Mar-22 08:50:05 - INFO - Loading kmeans' scaler
+25-Mar-22 08:50:05 - INFO - Loading kmeans' scaler
+25-Mar-22 08:50:05 - INFO - Scaling continuous columns
+25-Mar-22 08:50:05 - INFO - Scaling continuous columns
+25-Mar-22 08:50:05 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:/Users/Vahe/PycharmProjects/pythonProject/experiment.py", line 104, in <module>
+    scaled_cont_data = scaler.transform(data[cont_col_list])
+TypeError: 'NoneType' object is not subscriptable
+25-Mar-22 08:50:05 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:/Users/Vahe/PycharmProjects/pythonProject/experiment.py", line 104, in <module>
+    scaled_cont_data = scaler.transform(data[cont_col_list])
+TypeError: 'NoneType' object is not subscriptable
+25-Mar-22 08:55:57 - INFO - Getting input from a user
+25-Mar-22 08:55:57 - INFO - User specified input is uploaded.
+25-Mar-22 08:55:57 - INFO - Processing user defined input
+25-Mar-22 08:55:57 - INFO - DataFrame has been created.
+25-Mar-22 08:55:57 - INFO - Starting URL based feature extraction
+25-Mar-22 08:55:57 - INFO - End of URL based feature extraction
+25-Mar-22 08:55:57 - INFO - Starting URL domain based feature extraction
+25-Mar-22 08:55:57 - INFO - End of URL domain based feature extraction
+25-Mar-22 08:55:57 - INFO - Starting URL directory based feature extraction
+25-Mar-22 08:55:57 - INFO - End of URL directory based feature extraction
+25-Mar-22 08:55:57 - INFO - Starting URL file name based feature extraction
+25-Mar-22 08:55:57 - INFO - End of URL file name based feature extraction
+25-Mar-22 08:55:57 - INFO - Starting URL parameters based feature extraction
+25-Mar-22 08:55:57 - INFO - End of URL parameters based feature extraction
+25-Mar-22 08:55:57 - INFO - Starting resolving URL and external services based feature extraction
+25-Mar-22 08:55:57 - INFO - End of resolving URL and external services based feature extraction
+25-Mar-22 08:55:57 - INFO - User defined input is processed.
+25-Mar-22 08:55:57 - INFO - Loading categorical columns' list
+25-Mar-22 08:55:57 - INFO - Loading continuous columns' list
+25-Mar-22 08:55:57 - INFO - Encoding categorical data
+25-Mar-22 08:55:57 - INFO - Replacing -1 values
+25-Mar-22 08:55:57 - INFO - Replacing -1 values
+25-Mar-22 08:55:57 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 08:55:57 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 08:55:57 - INFO - Error occurred in replacement process
+Traceback (most recent call last):
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'domain_in_ip'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\data_preprocessing\preprocessing.py", line 239, in replace_missing_values
+    data[col] = data[col].apply(lambda x: -999 if x == -1 else x)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'domain_in_ip'
+25-Mar-22 08:55:57 - INFO - Error occurred in replacement process
+Traceback (most recent call last):
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'domain_in_ip'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\data_preprocessing\preprocessing.py", line 239, in replace_missing_values
+    data[col] = data[col].apply(lambda x: -999 if x == -1 else x)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'domain_in_ip'
+25-Mar-22 08:55:57 - INFO - Loading kmeans' scaler
+25-Mar-22 08:55:57 - INFO - Loading kmeans' scaler
+25-Mar-22 08:55:57 - INFO - Scaling continuous columns
+25-Mar-22 08:55:57 - INFO - Scaling continuous columns
+25-Mar-22 08:55:57 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:/Users/Vahe/PycharmProjects/pythonProject/experiment.py", line 108, in <module>
+    scaled_cont_data = scaler.transform(data[cont_col_list])
+TypeError: 'NoneType' object is not subscriptable
+25-Mar-22 08:55:57 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:/Users/Vahe/PycharmProjects/pythonProject/experiment.py", line 108, in <module>
+    scaled_cont_data = scaler.transform(data[cont_col_list])
+TypeError: 'NoneType' object is not subscriptable
+25-Mar-22 09:02:18 - INFO - Getting input from a user
+25-Mar-22 09:02:18 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:/Users/Vahe/PycharmProjects/pythonProject/experiment.py", line 52, in <module>
+    features_df = pd.DataFrame({'URL': url})
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\frame.py", line 468, in __init__
+    mgr = init_dict(data, index, columns, dtype=dtype)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\internals\construction.py", line 283, in init_dict
+    return arrays_to_mgr(arrays, data_names, index, columns, dtype=dtype)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\internals\construction.py", line 78, in arrays_to_mgr
+    index = extract_index(arrays)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\internals\construction.py", line 387, in extract_index
+    raise ValueError("If using all scalar values, you must pass an index")
+ValueError: If using all scalar values, you must pass an index
+25-Mar-22 09:07:23 - INFO - Getting input from a user
+25-Mar-22 09:07:25 - INFO - User specified input is uploaded.
+25-Mar-22 09:07:25 - INFO - Processing user defined input
+25-Mar-22 09:07:25 - INFO - DataFrame has been created.
+25-Mar-22 09:07:25 - INFO - Starting URL based feature extraction
+25-Mar-22 09:07:25 - INFO - End of URL based feature extraction
+25-Mar-22 09:07:25 - INFO - Starting URL domain based feature extraction
+25-Mar-22 09:07:25 - INFO - End of URL domain based feature extraction
+25-Mar-22 09:07:25 - INFO - Starting URL directory based feature extraction
+25-Mar-22 09:07:25 - INFO - End of URL directory based feature extraction
+25-Mar-22 09:07:25 - INFO - Starting URL file name based feature extraction
+25-Mar-22 09:07:25 - INFO - End of URL file name based feature extraction
+25-Mar-22 09:07:25 - INFO - Starting URL parameters based feature extraction
+25-Mar-22 09:07:25 - INFO - End of URL parameters based feature extraction
+25-Mar-22 09:07:25 - INFO - Starting resolving URL and external services based feature extraction
+25-Mar-22 09:07:25 - INFO - End of resolving URL and external services based feature extraction
+25-Mar-22 09:07:25 - INFO - User defined input is processed.
+25-Mar-22 09:07:25 - INFO - Loading categorical columns' list
+25-Mar-22 09:07:26 - INFO - Loading continuous columns' list
+25-Mar-22 09:07:26 - INFO - Encoding categorical data
+25-Mar-22 09:07:26 - INFO - Replacing -1 values
+25-Mar-22 09:07:26 - INFO - Replacing -1 values
+25-Mar-22 09:07:26 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 09:07:26 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 09:07:26 - INFO - Error occurred in replacement process
+Traceback (most recent call last):
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'domain_in_ip'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\data_preprocessing\preprocessing.py", line 239, in replace_missing_values
+    data[col] = data[col].apply(lambda x: -999 if x == -1 else x)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'domain_in_ip'
+25-Mar-22 09:07:26 - INFO - Error occurred in replacement process
+Traceback (most recent call last):
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'domain_in_ip'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\data_preprocessing\preprocessing.py", line 239, in replace_missing_values
+    data[col] = data[col].apply(lambda x: -999 if x == -1 else x)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Vahe\anaconda3\envs\phishing\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'domain_in_ip'
+25-Mar-22 09:07:26 - INFO - Loading kmeans' scaler
+25-Mar-22 09:07:26 - INFO - Loading kmeans' scaler
+25-Mar-22 09:07:26 - INFO - Scaling continuous columns
+25-Mar-22 09:07:26 - INFO - Scaling continuous columns
+25-Mar-22 09:07:26 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:/Users/Vahe/PycharmProjects/pythonProject/experiment.py", line 108, in <module>
+    scaled_cont_data = scaler.transform(data[cont_col_list])
+TypeError: 'NoneType' object is not subscriptable
+25-Mar-22 09:07:26 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:/Users/Vahe/PycharmProjects/pythonProject/experiment.py", line 108, in <module>
+    scaled_cont_data = scaler.transform(data[cont_col_list])
+TypeError: 'NoneType' object is not subscriptable
+25-Mar-22 09:09:16 - INFO - Getting input from a user
+25-Mar-22 09:09:16 - INFO - User specified input is uploaded.
+25-Mar-22 09:09:16 - INFO - Processing user defined input
+25-Mar-22 09:09:16 - INFO - DataFrame has been created.
+25-Mar-22 09:09:16 - INFO - Starting URL based feature extraction
+25-Mar-22 09:09:17 - INFO - End of URL based feature extraction
+25-Mar-22 09:09:17 - INFO - Starting URL domain based feature extraction
+25-Mar-22 09:09:17 - INFO - End of URL domain based feature extraction
+25-Mar-22 09:09:17 - INFO - Starting URL directory based feature extraction
+25-Mar-22 09:09:17 - INFO - End of URL directory based feature extraction
+25-Mar-22 09:09:17 - INFO - Starting URL file name based feature extraction
+25-Mar-22 09:09:17 - INFO - End of URL file name based feature extraction
+25-Mar-22 09:09:17 - INFO - Starting URL parameters based feature extraction
+25-Mar-22 09:09:17 - INFO - End of URL parameters based feature extraction
+25-Mar-22 09:09:17 - INFO - Starting resolving URL and external services based feature extraction
+25-Mar-22 09:09:41 - INFO - End of resolving URL and external services based feature extraction
+25-Mar-22 09:09:41 - INFO - User defined input is processed.
+25-Mar-22 09:09:41 - INFO - Loading categorical columns' list
+25-Mar-22 09:09:41 - INFO - Loading continuous columns' list
+25-Mar-22 09:09:41 - INFO - Encoding categorical data
+25-Mar-22 09:09:41 - INFO - Replacing -1 values
+25-Mar-22 09:09:41 - INFO - Replacing -1 values
+25-Mar-22 09:09:41 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 09:09:41 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 09:09:41 - INFO - The -1 values have been replaced with -999.
+25-Mar-22 09:09:41 - INFO - The -1 values have been replaced with -999.
+25-Mar-22 09:09:41 - INFO - Loading kmeans' scaler
+25-Mar-22 09:09:41 - INFO - Loading kmeans' scaler
+25-Mar-22 09:09:41 - INFO - Scaling continuous columns
+25-Mar-22 09:09:41 - INFO - Scaling continuous columns
+25-Mar-22 09:09:41 - INFO - Creating clusters out of user defined input
+25-Mar-22 09:09:41 - INFO - Creating clusters out of user defined input
+25-Mar-22 09:09:41 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:09:41 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:09:41 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:09:41 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:09:41 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:09:41 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:09:43 - INFO - Clusters for user defined input are created.
+25-Mar-22 09:09:43 - INFO - Clusters for user defined input are created.
+25-Mar-22 09:09:43 - INFO - Clusters for user defined input are created.
+25-Mar-22 09:09:43 - INFO - Prediction process is started.
+25-Mar-22 09:09:43 - INFO - Prediction process is started.
+25-Mar-22 09:09:43 - INFO - Prediction process is started.
+25-Mar-22 09:09:44 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:09:44 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:09:44 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:09:44 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:09:44 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:09:44 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:09:44 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:09:44 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:09:44 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:09:44 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:09:44 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:09:44 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:09:44 - INFO - Prediction is over.
+25-Mar-22 09:09:44 - INFO - Prediction is over.
+25-Mar-22 09:09:44 - INFO - Prediction is over.
+25-Mar-22 09:09:44 - INFO - Outputting the results
+25-Mar-22 09:09:44 - INFO - Outputting the results
+25-Mar-22 09:09:44 - INFO - Outputting the results
+25-Mar-22 09:16:38 - INFO - Getting input from a user
+25-Mar-22 09:16:39 - INFO - User specified input is uploaded.
+25-Mar-22 09:16:39 - INFO - Processing user defined input
+25-Mar-22 09:16:39 - INFO - DataFrame has been created.
+25-Mar-22 09:16:39 - INFO - Starting URL based feature extraction
+25-Mar-22 09:16:40 - INFO - End of URL based feature extraction
+25-Mar-22 09:16:40 - INFO - Starting URL domain based feature extraction
+25-Mar-22 09:16:40 - INFO - End of URL domain based feature extraction
+25-Mar-22 09:16:40 - INFO - Starting URL directory based feature extraction
+25-Mar-22 09:16:40 - INFO - End of URL directory based feature extraction
+25-Mar-22 09:16:40 - INFO - Starting URL file name based feature extraction
+25-Mar-22 09:16:40 - INFO - End of URL file name based feature extraction
+25-Mar-22 09:16:40 - INFO - Starting URL parameters based feature extraction
+25-Mar-22 09:16:40 - INFO - End of URL parameters based feature extraction
+25-Mar-22 09:16:40 - INFO - Starting resolving URL and external services based feature extraction
+25-Mar-22 09:17:05 - INFO - End of resolving URL and external services based feature extraction
+25-Mar-22 09:17:05 - INFO - User defined input is processed.
+25-Mar-22 09:17:05 - INFO - Loading categorical columns' list
+25-Mar-22 09:17:05 - INFO - Loading continuous columns' list
+25-Mar-22 09:17:05 - INFO - Encoding categorical data
+25-Mar-22 09:17:05 - INFO - Replacing -1 values
+25-Mar-22 09:17:05 - INFO - Replacing -1 values
+25-Mar-22 09:17:05 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 09:17:05 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 09:17:05 - INFO - The -1 values have been replaced with -999.
+25-Mar-22 09:17:05 - INFO - The -1 values have been replaced with -999.
+25-Mar-22 09:17:05 - INFO - Loading kmeans' scaler
+25-Mar-22 09:17:05 - INFO - Loading kmeans' scaler
+25-Mar-22 09:17:05 - INFO - Scaling continuous columns
+25-Mar-22 09:17:05 - INFO - Scaling continuous columns
+25-Mar-22 09:17:05 - INFO - Creating clusters out of user defined input
+25-Mar-22 09:17:05 - INFO - Creating clusters out of user defined input
+25-Mar-22 09:17:05 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:17:05 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:17:05 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:17:05 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:17:05 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:17:05 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:17:07 - INFO - Clusters for user defined input are created.
+25-Mar-22 09:17:07 - INFO - Clusters for user defined input are created.
+25-Mar-22 09:17:07 - INFO - Clusters for user defined input are created.
+25-Mar-22 09:17:07 - INFO - Prediction process is started.
+25-Mar-22 09:17:07 - INFO - Prediction process is started.
+25-Mar-22 09:17:07 - INFO - Prediction process is started.
+25-Mar-22 09:17:07 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:17:07 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:17:07 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:17:07 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:17:07 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:17:07 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:17:07 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:17:07 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:17:07 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:17:07 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:17:07 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:17:07 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:17:07 - INFO - Prediction is over.
+25-Mar-22 09:17:07 - INFO - Prediction is over.
+25-Mar-22 09:17:07 - INFO - Prediction is over.
+25-Mar-22 09:17:07 - INFO - Outputting the results
+25-Mar-22 09:17:07 - INFO - Outputting the results
+25-Mar-22 09:17:07 - INFO - Outputting the results
+25-Mar-22 09:19:00 - INFO - Getting input from a user
+25-Mar-22 09:19:00 - INFO - Getting input from a user
+25-Mar-22 09:19:00 - INFO - Getting input from a user
+25-Mar-22 09:19:00 - INFO - User specified input is uploaded.
+25-Mar-22 09:19:00 - INFO - User specified input is uploaded.
+25-Mar-22 09:19:00 - INFO - User specified input is uploaded.
+25-Mar-22 09:19:00 - INFO - Processing user defined input
+25-Mar-22 09:19:00 - INFO - Processing user defined input
+25-Mar-22 09:19:00 - INFO - Processing user defined input
+25-Mar-22 09:19:09 - INFO - DataFrame has been created.
+25-Mar-22 09:19:09 - INFO - DataFrame has been created.
+25-Mar-22 09:19:09 - INFO - DataFrame has been created.
+25-Mar-22 09:19:09 - INFO - Starting URL based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting URL based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting URL based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting URL domain based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting URL domain based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting URL domain based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL domain based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL domain based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL domain based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting URL directory based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting URL directory based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting URL directory based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL directory based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL directory based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL directory based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting URL file name based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting URL file name based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting URL file name based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL file name based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL file name based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL file name based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting URL parameters based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting URL parameters based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting URL parameters based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL parameters based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL parameters based feature extraction
+25-Mar-22 09:19:09 - INFO - End of URL parameters based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting resolving URL and external services based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting resolving URL and external services based feature extraction
+25-Mar-22 09:19:09 - INFO - Starting resolving URL and external services based feature extraction
+25-Mar-22 09:24:24 - INFO - End of resolving URL and external services based feature extraction
+25-Mar-22 09:24:24 - INFO - End of resolving URL and external services based feature extraction
+25-Mar-22 09:24:24 - INFO - End of resolving URL and external services based feature extraction
+25-Mar-22 09:24:24 - INFO - User defined input is processed.
+25-Mar-22 09:24:24 - INFO - User defined input is processed.
+25-Mar-22 09:24:24 - INFO - User defined input is processed.
+25-Mar-22 09:24:24 - INFO - Loading categorical columns' list
+25-Mar-22 09:24:24 - INFO - Loading categorical columns' list
+25-Mar-22 09:24:24 - INFO - Loading categorical columns' list
+25-Mar-22 09:24:24 - INFO - Loading continuous columns' list
+25-Mar-22 09:24:24 - INFO - Loading continuous columns' list
+25-Mar-22 09:24:24 - INFO - Loading continuous columns' list
+25-Mar-22 09:24:24 - INFO - Encoding categorical data
+25-Mar-22 09:24:24 - INFO - Encoding categorical data
+25-Mar-22 09:24:24 - INFO - Encoding categorical data
+25-Mar-22 09:24:24 - INFO - Replacing -1 values
+25-Mar-22 09:24:24 - INFO - Replacing -1 values
+25-Mar-22 09:24:24 - INFO - Replacing -1 values
+25-Mar-22 09:24:24 - INFO - Replacing -1 values
+25-Mar-22 09:24:24 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 09:24:24 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 09:24:24 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 09:24:24 - INFO - Entered the replace_missing_values method of the Preprocessor class
+25-Mar-22 09:24:24 - INFO - The -1 values have been replaced with -999.
+25-Mar-22 09:24:24 - INFO - The -1 values have been replaced with -999.
+25-Mar-22 09:24:24 - INFO - The -1 values have been replaced with -999.
+25-Mar-22 09:24:24 - INFO - The -1 values have been replaced with -999.
+25-Mar-22 09:24:24 - INFO - Loading kmeans' scaler
+25-Mar-22 09:24:24 - INFO - Loading kmeans' scaler
+25-Mar-22 09:24:24 - INFO - Loading kmeans' scaler
+25-Mar-22 09:24:24 - INFO - Loading kmeans' scaler
+25-Mar-22 09:24:24 - INFO - Scaling continuous columns
+25-Mar-22 09:24:24 - INFO - Scaling continuous columns
+25-Mar-22 09:24:24 - INFO - Scaling continuous columns
+25-Mar-22 09:24:24 - INFO - Scaling continuous columns
+25-Mar-22 09:24:24 - INFO - Creating clusters out of user defined input
+25-Mar-22 09:24:24 - INFO - Creating clusters out of user defined input
+25-Mar-22 09:24:24 - INFO - Creating clusters out of user defined input
+25-Mar-22 09:24:24 - INFO - Creating clusters out of user defined input
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Clusters for user defined input are created.
+25-Mar-22 09:24:24 - INFO - Clusters for user defined input are created.
+25-Mar-22 09:24:24 - INFO - Clusters for user defined input are created.
+25-Mar-22 09:24:24 - INFO - Clusters for user defined input are created.
+25-Mar-22 09:24:24 - INFO - Clusters for user defined input are created.
+25-Mar-22 09:24:24 - INFO - Prediction process is started.
+25-Mar-22 09:24:24 - INFO - Prediction process is started.
+25-Mar-22 09:24:24 - INFO - Prediction process is started.
+25-Mar-22 09:24:24 - INFO - Prediction process is started.
+25-Mar-22 09:24:24 - INFO - Prediction process is started.
+25-Mar-22 09:24:24 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:24:24 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:24:24 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:24:24 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:24:24 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the find_correct_model_file method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:24:24 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:24:24 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:24:24 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:24:24 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Entered the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file XGBoost2 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file XGBoost2 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file XGBoost2 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file XGBoost2 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Model file XGBoost2 loaded. Exited the load_model method of the FileOperation class
+25-Mar-22 09:24:24 - INFO - Prediction is over.
+25-Mar-22 09:24:24 - INFO - Prediction is over.
+25-Mar-22 09:24:24 - INFO - Prediction is over.
+25-Mar-22 09:24:24 - INFO - Prediction is over.
+25-Mar-22 09:24:24 - INFO - Prediction is over.
+25-Mar-22 09:24:24 - INFO - Outputting the results
+25-Mar-22 09:24:24 - INFO - Outputting the results
+25-Mar-22 09:24:24 - INFO - Outputting the results
+25-Mar-22 09:24:24 - INFO - Outputting the results
+25-Mar-22 09:24:24 - INFO - Outputting the results
+01-Apr-22 10:15:34 - INFO - Getting input from a user
+01-Apr-22 10:15:35 - INFO - User specified input is uploaded.
+01-Apr-22 10:15:35 - INFO - Processing user defined input
+01-Apr-22 10:15:37 - INFO - DataFrame has been created.
+01-Apr-22 10:15:39 - INFO - Starting URL based feature extraction
+01-Apr-22 10:15:40 - INFO - End of URL based feature extraction
+01-Apr-22 10:15:40 - INFO - Starting URL domain based feature extraction
+01-Apr-22 10:15:40 - INFO - End of URL domain based feature extraction
+01-Apr-22 10:15:40 - INFO - Starting URL directory based feature extraction
+01-Apr-22 10:15:41 - INFO - End of URL directory based feature extraction
+01-Apr-22 10:15:41 - INFO - Starting URL file name based feature extraction
+01-Apr-22 10:15:41 - INFO - End of URL file name based feature extraction
+01-Apr-22 10:15:41 - INFO - Starting URL parameters based feature extraction
+01-Apr-22 10:15:41 - INFO - End of URL parameters based feature extraction
+01-Apr-22 10:15:41 - INFO - Starting resolving URL and external services based feature extraction
+01-Apr-22 10:16:32 - INFO - End of resolving URL and external services based feature extraction
+01-Apr-22 10:16:32 - INFO - User defined input is processed.
+01-Apr-22 10:16:32 - INFO - Loading categorical columns' list
+01-Apr-22 10:16:32 - INFO - Loading continuous columns' list
+01-Apr-22 10:16:32 - INFO - Encoding categorical data
+01-Apr-22 10:16:34 - INFO - Replacing -1 values
+01-Apr-22 10:16:34 - INFO - Replacing -1 values
+01-Apr-22 10:16:34 - INFO - Entered the replace_missing_values method of the Preprocessor class
+01-Apr-22 10:16:34 - INFO - Entered the replace_missing_values method of the Preprocessor class
+01-Apr-22 10:16:34 - INFO - The -1 values have been replaced with -999.
+01-Apr-22 10:16:34 - INFO - The -1 values have been replaced with -999.
+01-Apr-22 10:16:34 - INFO - Loading kmeans' scaler
+01-Apr-22 10:16:34 - INFO - Loading kmeans' scaler
+01-Apr-22 10:16:35 - INFO - Scaling continuous columns
+01-Apr-22 10:16:35 - INFO - Scaling continuous columns
+01-Apr-22 10:16:36 - INFO - Creating clusters out of user defined input
+01-Apr-22 10:16:36 - INFO - Creating clusters out of user defined input
+01-Apr-22 10:16:36 - INFO - Entered the load_model method of the FileOperation class
+01-Apr-22 10:16:36 - INFO - Entered the load_model method of the FileOperation class
+01-Apr-22 10:16:36 - INFO - Entered the load_model method of the FileOperation class
+01-Apr-22 10:16:36 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+01-Apr-22 10:16:36 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+01-Apr-22 10:16:36 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+01-Apr-22 10:17:05 - INFO - Clusters for user defined input are created.
+01-Apr-22 10:17:05 - INFO - Clusters for user defined input are created.
+01-Apr-22 10:17:05 - INFO - Clusters for user defined input are created.
+01-Apr-22 10:17:05 - INFO - Prediction process is started.
+01-Apr-22 10:17:05 - INFO - Prediction process is started.
+01-Apr-22 10:17:05 - INFO - Prediction process is started.
+01-Apr-22 10:17:05 - INFO - Entered the find_correct_model_file method of the FileOperation class
+01-Apr-22 10:17:05 - INFO - Entered the find_correct_model_file method of the FileOperation class
+01-Apr-22 10:17:05 - INFO - Entered the find_correct_model_file method of the FileOperation class
+01-Apr-22 10:17:05 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+01-Apr-22 10:17:05 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+01-Apr-22 10:17:05 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+01-Apr-22 10:17:05 - INFO - Entered the load_model method of the FileOperation class
+01-Apr-22 10:17:05 - INFO - Entered the load_model method of the FileOperation class
+01-Apr-22 10:17:05 - INFO - Entered the load_model method of the FileOperation class
+01-Apr-22 10:17:05 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+01-Apr-22 10:17:05 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+01-Apr-22 10:17:05 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+01-Apr-22 10:17:05 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\app.py", line 132, in predict
+    for val in model.predict(cluster_data):
+AttributeError: 'numpy.float64' object has no attribute 'predict'
+01-Apr-22 10:17:05 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\app.py", line 132, in predict
+    for val in model.predict(cluster_data):
+AttributeError: 'numpy.float64' object has no attribute 'predict'
+01-Apr-22 10:17:05 - ERROR - Error occurred
+Traceback (most recent call last):
+  File "C:\Users\Vahe\PycharmProjects\pythonProject\app.py", line 132, in predict
+    for val in model.predict(cluster_data):
+AttributeError: 'numpy.float64' object has no attribute 'predict'
+02-Apr-22 19:28:29 - INFO - Getting input from a user
+02-Apr-22 19:28:30 - INFO - User specified input is uploaded.
+02-Apr-22 19:28:30 - INFO - Processing user defined input
+02-Apr-22 19:29:13 - INFO - DataFrame has been created.
+02-Apr-22 19:29:13 - INFO - Starting URL based feature extraction
+02-Apr-22 19:29:20 - INFO - End of URL based feature extraction
+02-Apr-22 19:29:20 - INFO - Starting URL domain based feature extraction
+02-Apr-22 19:29:20 - INFO - End of URL domain based feature extraction
+02-Apr-22 19:29:20 - INFO - Starting URL directory based feature extraction
+02-Apr-22 19:29:20 - INFO - End of URL directory based feature extraction
+02-Apr-22 19:29:20 - INFO - Starting URL file name based feature extraction
+02-Apr-22 19:29:20 - INFO - End of URL file name based feature extraction
+02-Apr-22 19:29:20 - INFO - Starting URL parameters based feature extraction
+02-Apr-22 19:29:20 - INFO - End of URL parameters based feature extraction
+02-Apr-22 19:29:20 - INFO - Starting resolving URL and external services based feature extraction
+02-Apr-22 19:30:36 - INFO - End of resolving URL and external services based feature extraction
+02-Apr-22 19:30:36 - INFO - User defined input is processed.
+02-Apr-22 19:30:36 - INFO - Loading categorical columns' list
+02-Apr-22 19:30:36 - INFO - Loading continuous columns' list
+02-Apr-22 19:30:36 - INFO - Encoding categorical data
+02-Apr-22 19:30:36 - INFO - Replacing -1 values
+02-Apr-22 19:30:36 - INFO - Replacing -1 values
+02-Apr-22 19:30:36 - INFO - Entered the replace_missing_values method of the Preprocessor class
+02-Apr-22 19:30:36 - INFO - Entered the replace_missing_values method of the Preprocessor class
+02-Apr-22 19:30:36 - INFO - The -1 values have been replaced with -999.
+02-Apr-22 19:30:36 - INFO - The -1 values have been replaced with -999.
+02-Apr-22 19:30:36 - INFO - Loading kmeans' scaler
+02-Apr-22 19:30:36 - INFO - Loading kmeans' scaler
+02-Apr-22 19:30:36 - INFO - Scaling continuous columns
+02-Apr-22 19:30:36 - INFO - Scaling continuous columns
+02-Apr-22 19:30:37 - INFO - Creating clusters out of user defined input
+02-Apr-22 19:30:37 - INFO - Creating clusters out of user defined input
+02-Apr-22 19:30:37 - INFO - Entered the load_model method of the FileOperation class
+02-Apr-22 19:30:37 - INFO - Entered the load_model method of the FileOperation class
+02-Apr-22 19:30:37 - INFO - Entered the load_model method of the FileOperation class
+02-Apr-22 19:30:37 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+02-Apr-22 19:30:37 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+02-Apr-22 19:30:37 - INFO - Model file KMeans loaded. Exited the load_model method of the FileOperation class
+02-Apr-22 19:30:44 - INFO - Clusters for user defined input are created.
+02-Apr-22 19:30:44 - INFO - Clusters for user defined input are created.
+02-Apr-22 19:30:44 - INFO - Clusters for user defined input are created.
+02-Apr-22 19:30:44 - INFO - Prediction process is started.
+02-Apr-22 19:30:44 - INFO - Prediction process is started.
+02-Apr-22 19:30:44 - INFO - Prediction process is started.
+02-Apr-22 19:30:44 - INFO - Entered the find_correct_model_file method of the FileOperation class
+02-Apr-22 19:30:44 - INFO - Entered the find_correct_model_file method of the FileOperation class
+02-Apr-22 19:30:44 - INFO - Entered the find_correct_model_file method of the FileOperation class
+02-Apr-22 19:30:44 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+02-Apr-22 19:30:44 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+02-Apr-22 19:30:44 - INFO - Exited the find_correct_model_file method of the FileOperation class.
+02-Apr-22 19:30:44 - INFO - Entered the load_model method of the FileOperation class
+02-Apr-22 19:30:44 - INFO - Entered the load_model method of the FileOperation class
+02-Apr-22 19:30:44 - INFO - Entered the load_model method of the FileOperation class
+02-Apr-22 19:30:44 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+02-Apr-22 19:30:44 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+02-Apr-22 19:30:44 - INFO - Model file XGBoost0 loaded. Exited the load_model method of the FileOperation class
+02-Apr-22 19:30:59 - INFO - Prediction is over.
+02-Apr-22 19:30:59 - INFO - Prediction is over.
+02-Apr-22 19:30:59 - INFO - Prediction is over.
+02-Apr-22 19:30:59 - INFO - Outputting the results
+02-Apr-22 19:30:59 - INFO - Outputting the results
+02-Apr-22 19:30:59 - INFO - Outputting the results

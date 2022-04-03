@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:white">
+        <form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data" >
+            <h2>Phishing website detector</h2>
+
+            <div class='center'>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <h3>Input a website URL</h3>
+                <input id="website" name="website">
+
+                <br>
+                <br>
+                <br>OR
+                <br>
+                <br>
+
+                <h3>Input a csv/excel file with URLs</h3>
+                <h4>(Please insert a URL in each row of a specified file)</h4>
+                <input id="file" name='file' type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+                
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <button id="check" type="submit ">Check</button>
+
+                <br>
+                <br>
+                <br>
+                <h3>{{ prediction_text }}<h3>
+            </div>
+
+        </form>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='background.jpg') }}");
+            text-align: center;
+            padding: 0px;
+        }
+
+        .left{
+            float:left;
+            width:20%;
+            padding:5px;
+            min-height:200px;
+        }        
+        
+
+        #website {
+            width:  200px;
+            border-radius: 14px;
+            height: 21px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #check {
+            width:  200px;
+            border-radius: 14px;
+            height: 25px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #check:hover {
+            background-color: seagreen;
+        }
+    </style>
+</body>
+
+</html>
