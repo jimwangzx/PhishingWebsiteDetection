@@ -4,22 +4,22 @@ APScheduler==3.9.1
 async-timeout==4.0.2
 asynctest==0.13.0
 atomicwrites==1.4.0
-attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1640799537051/work
+attrs
 bayesian-optimization==1.2.0
 beautifulsoup4==4.10.0
 cassandra-driver==3.25.0
 catboost==1.0.4
 certifi==2021.10.8
 charset-normalizer==2.0.12
-click @ file:///D:/bld/click_1645238363756/work
-colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1602866480661/work
+click
+colorama
 colorhash==1.0.4
 configparser==5.2.0
 cycler==0.11.0
 dnspython==2.2.1
 et-xmlfile==1.1.0
-Flask @ file:///home/conda/feedstock_root/build_artifacts/flask_1644887820294/work
-Flask-Cors @ file:///home/conda/feedstock_root/build_artifacts/flask-cors_1622383494577/work
+Flask
+Flask-Cors
 Flask-MonitoringDashboard==3.1.1
 frozenlist==1.3.0
 future==0.18.2
@@ -28,22 +28,22 @@ geomet==0.2.1.post1
 graphviz==0.19.1
 greenlet==1.1.2
 idna==3.3
-importlib-metadata @ file:///D:/bld/importlib-metadata_1647210580015/work
-importlib-resources @ file:///home/conda/feedstock_root/build_artifacts/importlib_resources_1635615662634/work
-itsdangerous @ file:///home/conda/feedstock_root/build_artifacts/itsdangerous_1646849180040/work
-Jinja2 @ file:///home/conda/feedstock_root/build_artifacts/jinja2_1636510082894/work
-joblib @ file:///home/conda/feedstock_root/build_artifacts/joblib_1633637554808/work
-jsonschema @ file:///home/conda/feedstock_root/build_artifacts/jsonschema-meta_1642000296051/work
+importlib-metadata
+importlib-resources
+itsdangerous
+Jinja2
+joblib
+jsonschema
 kiwisolver==1.4.0
-kneed @ file:///home/conda/feedstock_root/build_artifacts/kneed_1597304056973/work
+kneed
 lightgbm==3.3.2
-MarkupSafe @ file:///D:/bld/markupsafe_1647364679558/work
+MarkupSafe
 matplotlib==3.2.2
 maxminddb==2.2.0
 mixed-naive-bayes==0.0.1
 more-itertools==8.12.0
 multidict==6.0.2
-numpy @ file:///D:/bld/numpy_1640083233759/work
+numpy
 openpyxl==3.0.9
 pandas==1.1.5
 plotly==5.6.0
@@ -52,32 +52,32 @@ psutil==5.9.0
 py==1.11.0
 pyaml==21.10.1
 pyparsing==3.0.7
-pyrsistent @ file:///D:/bld/pyrsistent_1642534576941/work
+pyrsistent
 pytest==3.6.4
 python-dateutil==2.8.2
 python-whois==0.7.3
 pytz==2021.3
-PyYAML @ file:///D:/bld/pyyaml_1636139977724/work
-regex @ file:///D:/bld/regex_1647400123528/work
+PyYAML
+regex
 requests==2.27.1
-scikit-learn @ file:///D:/bld/scikit-learn_1640464434301/work
+scikit-learn
 scikit-optimize==0.9.0
-scipy @ file:///C:/bld/scipy_1637806996411/work
+scipy
 seaborn==0.11.2
-six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
+six
 sklearn==0.0
 soupsieve==2.3.1
 SQLAlchemy==1.4.32
 tenacity==8.0.1
-threadpoolctl @ file:///home/conda/feedstock_root/build_artifacts/threadpoolctl_1643647933166/work
-tqdm @ file:///home/conda/feedstock_root/build_artifacts/tqdm_1646031859244/work
-typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1644850595256/work
+threadpoolctl
+tqdm
+typing_extensions
 tzlocal==2.0.0
 urllib3==1.26.9
 virtualenv==16.7.5
-Werkzeug @ file:///home/conda/feedstock_root/build_artifacts/werkzeug_1644332431572/work
+Werkzeug
 wincertstore==0.2
 xlrd==2.0.1
 yarl==1.7.2
-zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1643828507773/work
+zipp
 gunicorn
