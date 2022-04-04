@@ -66,4 +66,5 @@ wincertstore==0.2
 xlrd==2.0.1
 yarl==1.7.2
 zipp
+xgboost
 gunicorn
