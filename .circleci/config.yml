@@ -7,7 +7,7 @@ jobs:
     docker:
       - image: circleci/python:3.7-buster-browsers
         auth:
-          username: mydockerhub-user
+          username: $DOCKERHUB_USER
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
