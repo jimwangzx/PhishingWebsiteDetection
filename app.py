@@ -138,5 +138,7 @@ def predict():
     except Exception as e:
         return render_template('index.html', prediction_text=str(e))
 
+port = int(os.getenv('PORT'))
 if __name__ == "__main__":
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(host='0.0.0.0', port=port)
