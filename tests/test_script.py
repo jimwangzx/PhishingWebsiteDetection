@@ -1,11 +1,7 @@
 import unittest
 
-from app import app
-import os
-
-
-class TestToPerform(unittest.TestCase):
-    pass
+def test_func():
+    assert 2 == 2
 
 
 if __name__ == '__main__':
